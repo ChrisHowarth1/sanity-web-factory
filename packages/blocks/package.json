@@ -1,0 +1,26 @@
+{
+  "name": "@factory/blocks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@factory/ui": "workspace:*",
+    "@portabletext/react": "^8.0.1",
+    "lucide-react": "^1.70.0",
+    "next-sanity": "^13.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "typescript": "~5.9.3"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./page-builder": "./src/page-builder.tsx",
+    "./schemas": "./src/schemas.ts"
+  }
+}

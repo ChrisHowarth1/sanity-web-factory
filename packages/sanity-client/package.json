@@ -1,0 +1,21 @@
+{
+  "name": "@factory/sanity-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@factory/blocks": "workspace:*",
+    "@factory/ui": "workspace:*",
+    "next-sanity": "^13.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

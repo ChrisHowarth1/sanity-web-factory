@@ -1,0 +1,7 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# One flat node_modules, so Sanity and its UI libraries exist exactly once.
+# (Separate copies break Studio context, e.g. useFormValue in custom inputs.)
+nodeLinker: hoisted

@@ -1,0 +1,15 @@
+# Used by both Netlify sites for this variant (production and preview).
+# In the Netlify UI set "Base directory" to apps/starter; Netlify installs the
+# pnpm workspace from the repo root and builds from here.
+#
+# Production: NEXT_PUBLIC_SANITY_VISUAL_EDITING=false, rebuilt by a build hook
+#             that the Sanity webhook calls on publish.
+# Preview:    NEXT_PUBLIC_SANITY_VISUAL_EDITING=true + SANITY_API_READ_TOKEN,
+#             password-protected, never indexed.
+
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

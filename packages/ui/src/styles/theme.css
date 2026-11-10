@@ -1,0 +1,78 @@
+/*
+ * Maps the theme's CSS variables onto Tailwind v4 colour utilities, the same
+ * names shadcn/ui uses (bg-primary, text-muted-foreground, ...). The values
+ * themselves are written per variant from Sanity by <ThemeStyle />; the
+ * defaults below only apply if no theme is set.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+}
+
+:root {
+  --radius: 0.625rem;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-heading: ui-sans-serif, system-ui, sans-serif;
+  --background: oklch(0.99 0.006 265);
+  --foreground: oklch(0.145 0.012 265);
+  --card: oklch(0.997 0.003 265);
+  --card-foreground: oklch(0.145 0.012 265);
+  --popover: oklch(0.997 0.003 265);
+  --popover-foreground: oklch(0.145 0.012 265);
+  --primary: oklch(0.21 0.006 286);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.955 0.009 265);
+  --secondary-foreground: oklch(0.21 0.012 265);
+  --muted: oklch(0.965 0.006 265);
+  --muted-foreground: oklch(0.5 0.012 265);
+  --accent: oklch(0.955 0.03 262);
+  --accent-foreground: oklch(0.27 0.08 262);
+  --highlight: oklch(0.546 0.215 262.9);
+  --highlight-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.3);
+  --border: oklch(0.905 0.009 265);
+  --input: oklch(0.905 0.009 265);
+  --ring: oklch(0.21 0.006 286);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}

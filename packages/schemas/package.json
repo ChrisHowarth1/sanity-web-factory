@@ -1,0 +1,22 @@
+{
+  "name": "@factory/schemas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@factory/blocks": "workspace:*",
+    "@factory/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "typescript": "~5.9.3"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@factory/ui/styles.css";
+
+/* Scan the shared packages for class names (blocks + shadcn components). */
+@source "../../../../../packages";
+
+@custom-variant dark (&:is(.dark *));
